@@ -21,8 +21,12 @@ int main(){
     printf("Enter the location in array : ");
     fflush(stdin);fflush(stdout);
     scanf("%d",&location);
+    for(i=n;i>location-1;i--){
+        
+        arr[i]=arr[i-1];
+    }
     arr[location-1]=num;
-    for(i=0;i<n;i++){
+    for(i=0;i<n+1;i++){
         printf("%d\t",arr[i]);
     }
     printf("\n");
